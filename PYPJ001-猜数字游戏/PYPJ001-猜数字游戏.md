@@ -19,7 +19,7 @@ updated: 2026-09-03
 - [x] 支持输入 `-1` 中途退出本局
 
 ## 🔗 完整代码
-[GitHub链接待补](https://github.com/你的用户名/python-practice/tree/main/PYPJ001-guess-number)
+[GitHub](https://github.com/JabinWei/python-playground/blob/master/PYPJ001-猜数字游戏/guessNumberGame.py)
 
 ## 💡 最终实现思路
 
@@ -36,8 +36,11 @@ updated: 2026-09-03
 
 ## 📋 完成代码要点回顾
 
-### 代码结构
+### 完整代码
 ```python
+# 完整代码请看 GitHub：
+# https://github.com/JabinWei/python-playground/blob/master/PYPJ001-猜数字游戏/guessNumberGame.py
+
 import random
 
 # 各功能拆分函数
