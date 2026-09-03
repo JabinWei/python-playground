@@ -1,9 +1,9 @@
 ---
 type: project-practice
 status: 已完成
-tags: [Python, 项目练习, PYPJ002]
+tags: [Python, 项目练习, PYPJ001]
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-03
 ---
 
 ## 🎯 项目
@@ -19,7 +19,7 @@ updated: 2026-09-02
 - [x] 支持输入 `-1` 中途退出本局
 
 ## 🔗 完整代码
-[GitHub链接待补](https://github.com/你的用户名/python-practice/tree/main/PYPJ002-guess-number)
+[GitHub链接待补](https://github.com/你的用户名/python-practice/tree/main/PYPJ001-guess-number)
 
 ## 💡 最终实现思路
 
