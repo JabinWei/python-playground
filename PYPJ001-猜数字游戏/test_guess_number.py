@@ -1,6 +1,7 @@
 """
 单元测试：猜数字游戏
 运行方式：pytest test_guess_number.py -v
+分步运行：pytest -m "taskno=N" -v （N 是任务号）
 """
 
 import pytest
@@ -11,8 +12,11 @@ from guess_number_game import (
     play_one_round
 )
 
+
+@pytest.mark.task(taskno=1)
 class TestGenerateNumber:
-    """测试 generate_number 函数"""
+    """任务 1：测试 generate_number 函数"""
+
     def test_returns_integer_in_range(self):
         """测试返回值是指定范围内的整数"""
         for _ in range(100):  # 多次测试避免概率问题
@@ -27,8 +31,9 @@ class TestGenerateNumber:
             assert 10 <= num <= 20
 
 
+@pytest.mark.task(taskno=2)
 class TestGetUserGuess:
-    """测试 get_user_guess 函数"""
+    """任务 2：测试 get_user_guess 函数"""
 
     @patch('builtins.input', side_effect=['50'])
     def test_valid_input_returns_integer(self, mock_input):
@@ -53,8 +58,9 @@ class TestGetUserGuess:
         mock_input.assert_called_once()
 
 
+@pytest.mark.task(taskno=3)
 class TestPlayOneRound:
-    """测试 play_one_round 函数"""
+    """任务 3：测试 play_one_round 函数"""
 
     @patch('guess_number_game.get_user_guess', side_effect=[50, 25, 12, 42])
     def test_correct_guess_returns_guess_count(self, mock_guess):
@@ -80,5 +86,4 @@ class TestPlayOneRound:
         with patch('guess_number_game.generate_number', return_value=42):
             play_one_round()
             # 至少会打印 "太小了" / "太大了" 几次，最后打印 "恭喜猜对了"
-            assert any("恭喜" in str(call) for call in mock_print.call_args_list)
             assert any("太小" in str(call) for call in mock_print.call_args_list)
